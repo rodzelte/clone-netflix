@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import { ChevronRight } from "react-feather"
 
 const AuthScreen = () => {
-  const [email, setEmail] = useState(" ")
+  const [email, setEmail] = useState("")
   return (
     <div className="hero-bg relative">
       <header className="max-w-6xl mx-auto flex items-center justify-between p-4 pb-10">
@@ -12,24 +12,27 @@ const AuthScreen = () => {
           alt="netflix-logo"
           className="w-32 md:w-52"
         />
-        <Link to={"/login"} className="text-white bg-red-500 py-1 px-2 rounded">
+        <Link
+          to={"/login"}
+          className="text-white bg-red-600  hover:bg-opacity-95 py-1 px-3 rounded"
+        >
           Sign in
         </Link>
       </header>
       <div className="flex flex-col items-center justify-center text-center py-40 text-white max-w-6xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">
-          Unlimited movies, TV shows, and more
+        <h1 className="text-4xl md:text-6xl font-bold mb-5">
+          Unlimited movies, <br /> TV shows, and more
         </h1>
-        <p className="text-lg mb-4">Watch anywhere. Cancel anytime</p>
-        <p className="mb-4">
+        <p className="text-lg mb-8">Starts at ₱149. Cancel anytime.</p>
+        <p className="mb-6 text-sm text-gray-100 ">
           Ready to watch? Enter your email to create or restart your membership.
         </p>
 
         <form action="" className="flex flex-col md:flex-row gap-4 w-1/2">
           <input
             type="text"
-            placeholder="Email address"
-            className="p-2 rounded flex-1 bg-black/80 border border-gray-700"
+            placeholder="Email Address"
+            className="p-2 rounded flex-1 bg-black/80 border pl-4 placeholder:text-sm border-gray-700"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />

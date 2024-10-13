@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-.hero-bg{
-  background-image:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.1)), url("hero.png") ;
+.hero-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)),
+    url("hero.png");
+}
+
+@font-face {
+  font-family: "NetflixSans";
+  src: url("/fonts/Netflix-Medium.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NetflixSans";
+  src: url("/fonts/Netflix-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: "NetflixSans", sans-serif;
 }
