@@ -1,15 +1,15 @@
-import { useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
-import { ChevronRight } from "react-feather"
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { ChevronRight } from "react-feather";
 
 const AuthScreen = () => {
-  const [email, setEmail] = useState("")
-  const navigate = useNavigate()
+  const [email, setEmail] = useState("");
+  const navigate = useNavigate();
 
   const handleFormSubmit = (e) => {
-    e.preventDefault()
-    navigate("/signup?email=" + email)
-  }
+    e.preventDefault();
+    navigate("/signup?email=" + email);
+  };
 
   return (
     <div className="hero-bg relative">
@@ -188,7 +188,7 @@ const AuthScreen = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AuthScreen
+export default AuthScreen;
