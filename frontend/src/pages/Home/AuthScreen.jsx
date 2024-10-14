@@ -1,9 +1,16 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { ChevronRight } from "react-feather"
 
 const AuthScreen = () => {
   const [email, setEmail] = useState("")
+  const navigate = useNavigate()
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault()
+    navigate("/signup?email=" + email)
+  }
+
   return (
     <div className="hero-bg relative">
       <header className="max-w-6xl mx-auto flex items-center justify-between p-4 pb-10">
@@ -28,7 +35,11 @@ const AuthScreen = () => {
           Ready to watch? Enter your email to create or restart your membership.
         </p>
 
-        <form action="" className="flex flex-col md:flex-row gap-4 w-1/2">
+        <form
+          action=""
+          className="flex flex-col md:flex-row gap-4 w-1/2"
+          onSubmit={handleFormSubmit}
+        >
           <input
             type="text"
             placeholder="Email Address"
@@ -45,7 +56,7 @@ const AuthScreen = () => {
       {/* separator */}
       <div className="h-2 w-full bg-[#232323]" aria-hidden="true"></div>
       {/* separator */}
-      {/* section */}
+      {/* 1st section */}
       <div className="py-10 bg-black text-white">
         <div className="flex max-w-6xl mx-auto items-center justify-center md:flex-row flex-col px-4 md:px-2">
           {/* left */}
@@ -76,7 +87,7 @@ const AuthScreen = () => {
       {/* separator */}
       <div className="h-2 w-full bg-[#232323]" aria-hidden="true"></div>
       {/* separator */}
-      {/*  2nd section  */}
+      {/*  3rd section  */}
       <div className="py-10 bg-black text-white">
         <div className="flex max-w-6xl mx-auto items-center justify-center md:flex-row flex-col-reverse px-4 md:px-2">
           {/* leftside */}
@@ -114,6 +125,64 @@ const AuthScreen = () => {
             </h2>
             <p className="text-lg md:text-xl">
               Save your favorites and always have something to watch.
+            </p>
+          </div>
+        </div>
+      </div>
+      {/* separator */}
+      <div className="h-2 w-full bg-[#232323]" aria-hidden="true"></div>
+      {/* separator */}
+
+      {/* 3rd section */}
+      <div className="py-10 bg-black text-white">
+        <div className="flex max-w-6xl mx-auto items-center justify-center md:flex-row flex-col px-4 md:px-2">
+          {/* left */}
+          <div className="flex-1 text-center  md:text-left">
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
+              Watch everywhere
+            </h2>
+            <p className="text-lg md:text-xl">
+              Stream unlimited movies and TV shows on your phone, tablet, laptop
+              and TV.
+            </p>
+          </div>
+          {/* right */}
+          <div className="flex-1 relative overflow-hidden">
+            <img
+              src="/device-pile.png"
+              alt="Device image"
+              className="mt-4 z-20 relative"
+            />
+            <video
+              className="absolute top-2 left-1/2 -translate-x-1/2 h-4/6 z-0 max-w-[63%]"
+              playsInline={true}
+              autoPlay={true}
+              muted={true}
+              loop={true}
+            >
+              <source src="/video-devices.m4v" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+      {/* separator */}
+      <div className="h-2 w-full bg-[#232323]" aria-hidden="true"></div>
+      {/* separator */}
+      {/* 4th section */}
+      <div className="py-10 bg-black text-white">
+        <div className="flex max-w-6xl mx-auto items-center justify-center flex-col md:flex-row px-4 md:px-2">
+          {/* left */}
+          <div className="flex-1 relative">
+            <img src="/kids.png" alt="Enjoy your TV" className="mt-4" />
+          </div>
+          {/* right */}
+          <div className="flex-1 text-center md:text-left">
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
+              Create profile for kids
+            </h2>
+            <p className="text-lg md:text-xl">
+              Send kids on adventure with their favorite characters in a space
+              made just for them-free with your membership.
             </p>
           </div>
         </div>
