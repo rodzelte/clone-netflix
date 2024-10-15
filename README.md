@@ -16,7 +16,7 @@ About This Course:
 -   💙 Awesome Landing Page
 -   🌐 Deployment
 -   🚀 And Many More Cool Features
--   ✅ This is a lot of work. Support my work by subscribing to the [LinkedIn](https://www.linkedin.com/in/rodzel-te/)
+-   ✅ This is a lot of work. Support my work by connecting to my [LinkedIn](https://www.linkedin.com/in/rodzel-te/)
 
 ### Setup .env file
 
