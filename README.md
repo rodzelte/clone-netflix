@@ -1,40 +1,43 @@
-Netflix Clone
-A feature-rich Netflix clone built using modern web development technologies. This project aims to replicate the core functionalities of Netflix, providing a smooth and immersive streaming experience.
+<h1 align="center">MERN Netflix Clone 🎬</h1>
 
-Features
-User Authentication: Sign up, log in, and manage multiple user profiles with ease.
-Interactive UI: A sleek, intuitive, and responsive design for browsing movies and TV shows.
-Custom API Integration: Fetch movie data and details using the TMDB API.
-Video Streaming: Stream trailers and videos seamlessly with smooth playback.
-Search & Filter: Quickly find content by genre, popularity, or search queries.
-Fully Responsive Design: Optimized for use across desktop, tablet, and mobile devices.
-Tech Stack
-Frontend: React, CSS/SCSS
-Backend: Node.js, Express, MongoDB
-API: TMDB API
-Getting Started
-Installation
-Clone the repository:
+![Demo App](/frontend/public/screenshot-for-readme.png)
 
-bash
-Copy code
-git clone https://github.com/yourusername/netflix-clone.git
-cd netflix-clone
-Install the dependencies:
 
-bash
-Copy code
-npm install
-Set up environment variables (e.g., API keys) in a .env file.
+About This Course:
 
-Build the project:
+-   ⚛️ Tech Stack: React.js, Node.js, Express.js, MongoDB, Tailwind
+-   🔐 Authentication with JWT
+-   📱 Responsive UI
+-   🎬 Fetch Movies and Tv Show
+-   🔎 Search for Actors and Movies
+-   🎥 Watch Trailers
+-   🔥 Fetch Search History
+-   🐱‍👤 Get Similar Movies/Tv Shows
+-   💙 Awesome Landing Page
+-   🌐 Deployment
+-   🚀 And Many More Cool Features
+-   ✅ This is a lot of work. Support my work by subscribing to the [LinkedIn](https://www.linkedin.com/in/rodzel-te/)
 
-bash
-Copy code
+### Setup .env file
+
+```bash
+PORT=5000
+MONGO_URI=your_mongo_uri
+NODE_ENV=development
+JWT_SECRET=your_jwt_secre
+TMDB_API_KEY=your_tmdb_api_key
+```
+
+### Run this app locally
+
+```shell
 npm run build
-Start the development server:
+```
 
-bash
-Copy code
-npm start
-Open http://localhost:3000 in your browser to view the app.
+### Start the app
+
+```shell
+npm run start
+```
+
+### I'll see you in the next one! 🚀
